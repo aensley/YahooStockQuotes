@@ -12,6 +12,9 @@ engines:
     enabled: true
     config:
       standard: "PSR1,PSR2"
+    checks:
+      Generic WhiteSpace DisallowTabIndent NonIndentTabsUsed:
+        enabled: false
   markdownlint:
     enabled: true
     checks:

@@ -18,7 +18,7 @@ Simple.
 
 ## Requirements
 
-There must be a `YahooStockQuotes.json` file in the same directory as the `YahooStockQuotes.php` file. 
+There must be a `YahooStockQuotes.json` file in the same directory as the `YahooStockQuotes.php` file.
 
 `YahooStockQuotes.json` must be **WRITABLE** by the user who owns the PHP process (apache, www-data, nginx, hhvm, etc.).
 
