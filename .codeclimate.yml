@@ -14,6 +14,11 @@ engines:
       standard: "PSR1,PSR2"
   markdownlint:
     enabled: true
+    checks:
+      MD010:
+        enabled: false
+      MD013:
+        enabled: false
 ratings:
   paths:
   - "**.php"
