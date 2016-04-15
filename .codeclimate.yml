@@ -11,7 +11,7 @@ engines:
   phpcodesniffer:
     enabled: true
     config:
-      standard: "PSR0,PSR1,PSR2"
+      standard: "PSR1,PSR2"
   markdownlint:
     enabled: true
 ratings:
