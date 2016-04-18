@@ -18,13 +18,6 @@ before_script:
 script: phpunit
 
 after_success:
-  # Re-enable allow_url_fopen
-  - |
-    if [[ $TRAVIS_PHP_VERSION = "hhv"* ]]; then
-      cat test_allow_url_fopen_phpconfig.ini >> /etc/hhvm/php.ini
-    else
-      phpenv config-add test_allow_url_fopen_phpconfig.ini
-    fi
   # CodeClimate.com
   - vendor/bin/test-reporter
   # Codecov.io
