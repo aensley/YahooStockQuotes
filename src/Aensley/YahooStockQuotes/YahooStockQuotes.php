@@ -6,7 +6,7 @@ namespace Aensley\YahooStockQuotes;
  * Yahoo Stock Quotes class to retrieve quote data from Yahoo's API.
  *
  * @package	Aensley/YahooStockQuotes
- * @author	 Andrew Ensley
+ * @author	Andrew Ensley
  */
 class YahooStockQuotes
 {
