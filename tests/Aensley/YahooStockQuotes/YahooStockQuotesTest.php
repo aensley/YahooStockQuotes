@@ -8,6 +8,8 @@ class YahooStockQuotesTest extends \PHPUnit_Framework_TestCase {
 	public $stockQuotes;
 
 	protected function setUp() {
+		ini_set('allow_url_fopen', 'Off');
+		$this->clearCache();
 		$this->stockQuotes = new YahooStockQuotes(array($this->symbol));
 	}
 
@@ -46,5 +48,13 @@ class YahooStockQuotesTest extends \PHPUnit_Framework_TestCase {
 		$this->assertInternalType('string', $date);
 		// Example: 2016-04-12 07:22:14
 		$this->assertRegExp('/^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}$/', $date);
+	}
+
+	private function clearCache() {
+		file_put_contents(__DIR__ . '/../../../src/Aensley/YahooStockQuotes/YahooStockQuotes.json', '');
+	}
+
+	protected function tearDown() {
+		$this->clearCache();
 	}
 }
